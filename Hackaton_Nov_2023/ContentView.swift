@@ -9,21 +9,40 @@ import SwiftUI
 import RealityKit
 
 struct ContentView: View {
-    @StateObject var captureModel: CaptureDataModel = CaptureDataModel.instance
-
+    
+    @State var username: String = ""
+    @State var password: String = ""
+    @State var isPresented = false
+    
     var body: some View {
-        CustomTabView(selected: .white, unselected: .systemGray2, background: .black, colorScheme: .dark) {
-            CaptureView()
-                .tabItem {
-                    Label("Capture", systemImage: "popcorn")
+            Form {
+                Section(header: Text("Login")) {
+                    HStack {
+                        Text("Username")
+                        TextField("Username", text: $username)
+                            .multilineTextAlignment(.trailing)
+                            .tint(.white)
+                    }
+                    
+                    HStack {
+                        Text("Password")
+                        TextField("Password", text: $password)
+                            .multilineTextAlignment(.trailing)
+                            .tint(.white)
+                    }
                 }
-            
-            Text("")
-                .tabItem {
-                    Label("Represent", systemImage: "person")
+                
+                
+                Button(action: {
+                    isPresented = true
+                }){
+                    Label("Connect", systemImage: "plus")
+                        .bold()
+                        .foregroundColor(.white)
                 }
-        }
-        .environmentObject(captureModel)
+                
+                
+            }.navigate(to: ContainerCapture(), when: $isPresented)
     }
 }
 

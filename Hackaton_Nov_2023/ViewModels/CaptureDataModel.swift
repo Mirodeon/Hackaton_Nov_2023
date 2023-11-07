@@ -34,4 +34,20 @@ class CaptureDataModel: ObservableObject, Identifiable {
             )
         }
     }
+    
+    func startNewCapture() {
+        session = ObjectCaptureSession()
+        
+        if let folderManager = CaptureFolderManager() {
+            scanFolderManager = folderManager
+            var configuration = ObjectCaptureSession.Configuration()
+            configuration.checkpointDirectory = folderManager.snapshotsFolder
+            configuration.isOverCaptureEnabled = false
+            
+            session.start(
+                imagesDirectory: folderManager.imagesFolder,
+                configuration: configuration
+            )
+        }
+    }
 }

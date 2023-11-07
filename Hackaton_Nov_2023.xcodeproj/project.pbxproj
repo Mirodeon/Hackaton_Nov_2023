@@ -23,7 +23,10 @@
 		F3CF07DD2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07DC2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift */; };
 		F3CF07E02AFA6058006B1F9C /* BoundingBoxGuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */; };
 		F3CF07E22AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */; };
-		F3CF07E42AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E32AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift */; };
+		F3CF07E42AFA65F7006B1F9C /* CaptureFolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E32AFA65F7006B1F9C /* CaptureFolderManager.swift */; };
+		F3CF07E62AFA74F1006B1F9C /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E52AFA74F1006B1F9C /* AuthDataModel.swift */; };
+		F3CF07E82AFA7527006B1F9C /* ContainerCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E72AFA7527006B1F9C /* ContainerCapture.swift */; };
+		F3CF07EE2AFA7AE6006B1F9C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07ED2AFA7AE6006B1F9C /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,10 @@
 		F3CF07DC2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectRoundedCorner.swift; sourceTree = "<group>"; };
 		F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxGuidanceView.swift; sourceTree = "<group>"; };
 		F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaptureOverlayView+Buttons.swift"; sourceTree = "<group>"; };
-		F3CF07E32AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaptureDataModel+FileManager.swift"; sourceTree = "<group>"; };
+		F3CF07E32AFA65F7006B1F9C /* CaptureFolderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureFolderManager.swift; sourceTree = "<group>"; };
+		F3CF07E52AFA74F1006B1F9C /* AuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
+		F3CF07E72AFA7527006B1F9C /* ContainerCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCapture.swift; sourceTree = "<group>"; };
+		F3CF07ED2AFA7AE6006B1F9C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 		F3CF07A12AFA2EC6006B1F9C /* Hackaton_Nov_2023 */ = {
 			isa = PBXGroup;
 			children = (
+				F3CF07EB2AFA7A97006B1F9C /* Utils */,
 				F3CF07DE2AFA5BF2006B1F9C /* Components */,
 				F3CF07DB2AFA54D7006B1F9C /* Modifiers */,
 				F3CF07D62AFA3C41006B1F9C /* Views */,
@@ -166,7 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				F3CF07D42AFA385C006B1F9C /* CaptureDataModel.swift */,
-				F3CF07E32AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift */,
+				F3CF07E32AFA65F7006B1F9C /* CaptureFolderManager.swift */,
+				F3CF07E52AFA74F1006B1F9C /* AuthDataModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -174,9 +182,7 @@
 		F3CF07D62AFA3C41006B1F9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F3CF07D72AFA3C5C006B1F9C /* CaptureView.swift */,
-				F3CF07D92AFA4E11006B1F9C /* CaptureOverlayView.swift */,
-				F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */,
+				F3CF07E92AFA7558006B1F9C /* ContentApp */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +201,41 @@
 				F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F3CF07E92AFA7558006B1F9C /* ContentApp */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07EA2AFA7572006B1F9C /* Capture */,
+				F3CF07E72AFA7527006B1F9C /* ContainerCapture.swift */,
+			);
+			path = ContentApp;
+			sourceTree = "<group>";
+		};
+		F3CF07EA2AFA7572006B1F9C /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07D72AFA3C5C006B1F9C /* CaptureView.swift */,
+				F3CF07D92AFA4E11006B1F9C /* CaptureOverlayView.swift */,
+				F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		F3CF07EB2AFA7A97006B1F9C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07EC2AFA7AA2006B1F9C /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F3CF07EC2AFA7AA2006B1F9C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07ED2AFA7AE6006B1F9C /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,10 +374,13 @@
 				F3CF07D82AFA3C5C006B1F9C /* CaptureView.swift in Sources */,
 				F3CF07D52AFA385C006B1F9C /* CaptureDataModel.swift in Sources */,
 				F3CF07DA2AFA4E11006B1F9C /* CaptureOverlayView.swift in Sources */,
-				F3CF07E42AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift in Sources */,
+				F3CF07E42AFA65F7006B1F9C /* CaptureFolderManager.swift in Sources */,
+				F3CF07EE2AFA7AE6006B1F9C /* View+Extension.swift in Sources */,
 				F3CF07E02AFA6058006B1F9C /* BoundingBoxGuidanceView.swift in Sources */,
+				F3CF07E82AFA7527006B1F9C /* ContainerCapture.swift in Sources */,
 				F3CF07D22AFA35C0006B1F9C /* CustomNavView.swift in Sources */,
 				F3CF07D02AFA339B006B1F9C /* CustomTabView.swift in Sources */,
+				F3CF07E62AFA74F1006B1F9C /* AuthDataModel.swift in Sources */,
 				F3CF07E22AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift in Sources */,
 				F3CF07A32AFA2EC6006B1F9C /* Hackaton_Nov_2023App.swift in Sources */,
 			);

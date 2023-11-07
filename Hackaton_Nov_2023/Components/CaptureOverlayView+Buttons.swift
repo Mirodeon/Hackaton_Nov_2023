@@ -155,6 +155,7 @@ extension CaptureOverlayView {
         var body: some View {
             Button(action: {
                 captureModel.session.cancel()
+                captureModel.startNewCapture()
             }, label: {
                 Text("Cancel")
                     .modifier(VisualEffectRoundedCorner())
