@@ -7,6 +7,9 @@
 
 import SwiftUI
 import SwiftData
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 @main
 struct Hackaton_Nov_2023App: App {
@@ -22,6 +25,8 @@ struct Hackaton_Nov_2023App: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
@@ -29,4 +34,13 @@ struct Hackaton_Nov_2023App: App {
         }
         .modelContainer(sharedModelContainer)
     }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
 }
