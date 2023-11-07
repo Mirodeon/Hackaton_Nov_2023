@@ -15,6 +15,15 @@
 		F3CF07B62AFA2EC7006B1F9C /* Hackaton_Nov_2023Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07B52AFA2EC7006B1F9C /* Hackaton_Nov_2023Tests.swift */; };
 		F3CF07C02AFA2EC8006B1F9C /* Hackaton_Nov_2023UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07BF2AFA2EC8006B1F9C /* Hackaton_Nov_2023UITests.swift */; };
 		F3CF07C22AFA2EC8006B1F9C /* Hackaton_Nov_2023UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07C12AFA2EC8006B1F9C /* Hackaton_Nov_2023UITestsLaunchTests.swift */; };
+		F3CF07D02AFA339B006B1F9C /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07CF2AFA339B006B1F9C /* CustomTabView.swift */; };
+		F3CF07D22AFA35C0006B1F9C /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07D12AFA35C0006B1F9C /* CustomNavView.swift */; };
+		F3CF07D52AFA385C006B1F9C /* CaptureDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07D42AFA385C006B1F9C /* CaptureDataModel.swift */; };
+		F3CF07D82AFA3C5C006B1F9C /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07D72AFA3C5C006B1F9C /* CaptureView.swift */; };
+		F3CF07DA2AFA4E11006B1F9C /* CaptureOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07D92AFA4E11006B1F9C /* CaptureOverlayView.swift */; };
+		F3CF07DD2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07DC2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift */; };
+		F3CF07E02AFA6058006B1F9C /* BoundingBoxGuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */; };
+		F3CF07E22AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */; };
+		F3CF07E42AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF07E32AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +55,15 @@
 		F3CF07BB2AFA2EC8006B1F9C /* Hackaton_Nov_2023UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hackaton_Nov_2023UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF07BF2AFA2EC8006B1F9C /* Hackaton_Nov_2023UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hackaton_Nov_2023UITests.swift; sourceTree = "<group>"; };
 		F3CF07C12AFA2EC8006B1F9C /* Hackaton_Nov_2023UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hackaton_Nov_2023UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3CF07CF2AFA339B006B1F9C /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F3CF07D12AFA35C0006B1F9C /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		F3CF07D42AFA385C006B1F9C /* CaptureDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureDataModel.swift; sourceTree = "<group>"; };
+		F3CF07D72AFA3C5C006B1F9C /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		F3CF07D92AFA4E11006B1F9C /* CaptureOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayView.swift; sourceTree = "<group>"; };
+		F3CF07DC2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectRoundedCorner.swift; sourceTree = "<group>"; };
+		F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxGuidanceView.swift; sourceTree = "<group>"; };
+		F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaptureOverlayView+Buttons.swift"; sourceTree = "<group>"; };
+		F3CF07E32AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaptureDataModel+FileManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +114,11 @@
 		F3CF07A12AFA2EC6006B1F9C /* Hackaton_Nov_2023 */ = {
 			isa = PBXGroup;
 			children = (
+				F3CF07DE2AFA5BF2006B1F9C /* Components */,
+				F3CF07DB2AFA54D7006B1F9C /* Modifiers */,
+				F3CF07D62AFA3C41006B1F9C /* Views */,
+				F3CF07D32AFA381A006B1F9C /* ViewModels */,
+				F3CF07CE2AFA3384006B1F9C /* BarViews */,
 				F3CF07A22AFA2EC6006B1F9C /* Hackaton_Nov_2023App.swift */,
 				F3CF07A42AFA2EC6006B1F9C /* ContentView.swift */,
 				F3CF07A62AFA2EC6006B1F9C /* Item.swift */,
@@ -128,6 +151,50 @@
 				F3CF07C12AFA2EC8006B1F9C /* Hackaton_Nov_2023UITestsLaunchTests.swift */,
 			);
 			path = Hackaton_Nov_2023UITests;
+			sourceTree = "<group>";
+		};
+		F3CF07CE2AFA3384006B1F9C /* BarViews */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07CF2AFA339B006B1F9C /* CustomTabView.swift */,
+				F3CF07D12AFA35C0006B1F9C /* CustomNavView.swift */,
+			);
+			path = BarViews;
+			sourceTree = "<group>";
+		};
+		F3CF07D32AFA381A006B1F9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07D42AFA385C006B1F9C /* CaptureDataModel.swift */,
+				F3CF07E32AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F3CF07D62AFA3C41006B1F9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07D72AFA3C5C006B1F9C /* CaptureView.swift */,
+				F3CF07D92AFA4E11006B1F9C /* CaptureOverlayView.swift */,
+				F3CF07DF2AFA6057006B1F9C /* BoundingBoxGuidanceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3CF07DB2AFA54D7006B1F9C /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07DC2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		F3CF07DE2AFA5BF2006B1F9C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +329,15 @@
 			files = (
 				F3CF07A52AFA2EC6006B1F9C /* ContentView.swift in Sources */,
 				F3CF07A72AFA2EC6006B1F9C /* Item.swift in Sources */,
+				F3CF07DD2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift in Sources */,
+				F3CF07D82AFA3C5C006B1F9C /* CaptureView.swift in Sources */,
+				F3CF07D52AFA385C006B1F9C /* CaptureDataModel.swift in Sources */,
+				F3CF07DA2AFA4E11006B1F9C /* CaptureOverlayView.swift in Sources */,
+				F3CF07E42AFA65F7006B1F9C /* CaptureDataModel+FileManager.swift in Sources */,
+				F3CF07E02AFA6058006B1F9C /* BoundingBoxGuidanceView.swift in Sources */,
+				F3CF07D22AFA35C0006B1F9C /* CustomNavView.swift in Sources */,
+				F3CF07D02AFA339B006B1F9C /* CustomTabView.swift in Sources */,
+				F3CF07E22AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift in Sources */,
 				F3CF07A32AFA2EC6006B1F9C /* Hackaton_Nov_2023App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,8 +502,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hackaton_Nov_2023/Preview Content\"";
+				DEVELOPMENT_TEAM = 85WNM5K6G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Give me camera !";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,8 +532,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hackaton_Nov_2023/Preview Content\"";
+				DEVELOPMENT_TEAM = 85WNM5K6G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Give me camera !";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
