@@ -24,13 +24,8 @@ struct LoginView: View {
                 .padding()
             
             Button(action: {
-                Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                    if let error = error {
-                        print("Error signing in: \(error.localizedDescription)")
-                    } else {
-                        // User successfully signed in
-                    }
-                }
+                // Appel de la fonction de connexion en réponse à l'action de l'utilisateur
+                self.login()
             }) {
                 Text("Se connecter")
                     .padding()
@@ -41,19 +36,20 @@ struct LoginView: View {
         }
         .padding()
     }
-}
-private func writeDB(email: String, password: String) {
-    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-        if let error = error {
-            print("Error signing in: \(error.localizedDescription)")
-        } else {
-            // User successfully signed in
+    
+    private func login() {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print("Error signing in: \(error.localizedDescription)")
+            } else {
+                print("Connecté avec succès")
+            }
         }
     }
 }
+
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
 }
-
