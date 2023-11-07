@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct Hackaton_Nov_2023App: App {
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,

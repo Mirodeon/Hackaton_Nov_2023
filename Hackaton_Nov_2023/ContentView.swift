@@ -9,8 +9,9 @@ import SwiftUI
 import RealityKit
 
 struct ContentView: View {
+    
     @StateObject var captureModel: CaptureDataModel = CaptureDataModel.instance
-
+    
     var body: some View {
         CustomTabView(selected: .white, unselected: .systemGray2, background: .black, colorScheme: .dark) {
             CaptureView()
