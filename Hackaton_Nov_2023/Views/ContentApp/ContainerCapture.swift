@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContainerCapture: View {
-    @StateObject var captureModel: CaptureDataModel = CaptureDataModel.instance
     
     var body: some View {
         CustomTabView(selected: .white, unselected: .systemGray2, background: .black, colorScheme: .dark) {
@@ -17,12 +16,11 @@ struct ContainerCapture: View {
                     Label("Capture", systemImage: "popcorn")
                 }
             
-            Text("")
+            LocalModelView()
                 .tabItem {
-                    Label("Represent", systemImage: "person")
+                    Label("Local", systemImage: "person")
                 }
         }
-        .environmentObject(captureModel)
     }
 }
 

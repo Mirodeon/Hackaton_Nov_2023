@@ -16,6 +16,7 @@ class CaptureDataModel: ObservableObject, Identifiable {
     
     static let instance = CaptureDataModel()
     @Published var session: ObjectCaptureSession
+    @Published var photogrammetrySession: PhotogrammetrySession?
     static let minNumImages = 10
     var scanFolderManager: CaptureFolderManager?
     
@@ -48,6 +49,22 @@ class CaptureDataModel: ObservableObject, Identifiable {
                 imagesDirectory: folderManager.imagesFolder,
                 configuration: configuration
             )
+        }
+    }
+    
+    func startReconstruction() {
+        if let scanFolderManager = scanFolderManager {
+            var configuration = PhotogrammetrySession.Configuration()
+            configuration.checkpointDirectory = scanFolderManager.snapshotsFolder
+            
+            do {
+                photogrammetrySession = try PhotogrammetrySession(
+                    input: scanFolderManager.imagesFolder,
+                    configuration: configuration
+                )
+            } catch {
+                print("Photogrammetry session failed.")
+            }
         }
     }
 }

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var authModel: AuthDataModel = AuthDataModel.instance
-    @State var email: String = ""
-    @State var password: String = ""
+    @EnvironmentObject var authModel: AuthDataModel
+    @State var email: String = "mehdi@dolly.com"
+    @State var password: String = "dolly123"
     @State var isPresented = false
     
     var body: some View {
@@ -51,6 +51,7 @@ struct LoginView: View {
                         authModel.signin(email: email, password: password) { connect in
                             isPresented = connect
                         }
+                        //isPresented = true
                     }
                 ){
                     Label("Connect", systemImage: "person")
@@ -69,10 +70,13 @@ struct LoginView: View {
             }
         }
         .background(.black)
-        .navigate(to: ContainerCapture(), when: $isPresented)
+        .fullScreenCover(isPresented: $isPresented){
+            ContainerCapture()
+        }
     }
 }
 
 #Preview {
     LoginView()
+        .environmentObject(AuthDataModel.instance)
 }

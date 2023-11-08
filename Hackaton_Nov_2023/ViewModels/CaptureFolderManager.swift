@@ -98,6 +98,11 @@ class CaptureFolderManager {
         else {
             return nil
         }
-        return documentsFolder.appendingPathComponent("Scans/", isDirectory: true)
+        
+        let rootFolder = documentsFolder.appendingPathComponent("Scans/", isDirectory: true)
+        
+        print(try! FileManager.default.contentsOfDirectory(at: rootFolder, includingPropertiesForKeys: nil))
+        
+        return rootFolder
     }
 }

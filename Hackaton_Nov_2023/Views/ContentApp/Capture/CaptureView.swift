@@ -10,6 +10,7 @@ import RealityKit
 
 struct CaptureView: View {
     @EnvironmentObject var captureModel: CaptureDataModel
+    @State var showReconstruct = false
     
     var body: some View {
         if captureModel.session.userCompletedScanPass {
@@ -18,6 +19,8 @@ struct CaptureView: View {
                 Button(
                     action: {
                         captureModel.session.finish()
+                        captureModel.startReconstruction()
+                        showReconstruct = true
                     },
                     label: {
                         Text("Finish")
@@ -29,6 +32,11 @@ struct CaptureView: View {
                             .background(.blue)
                             .clipShape(Capsule())
                     })
+            }
+            .sheet(isPresented: $showReconstruct) {
+                if let folderManager = captureModel.scanFolderManager {
+                    ReconstructView(outputFile: folderManager.modelsFolder.appendingPathComponent("model-mobile.usdz"))
+                }
             }
         } else {
             ZStack {

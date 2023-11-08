@@ -7,12 +7,45 @@
 
 import SwiftUI
 
-struct CustomNavView: View {
+struct CustomNavView<Content: View>: View {
+    let tint: UIColor
+    let background: UIColor
+    let colorScheme: ColorScheme
+    @ViewBuilder let viewBuilder: () -> Content
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            viewBuilder()
+        }
+        .onAppear() {
+            setupNavBarAppearance()
+        }
+        .accentColor(Color(tint))
+        .preferredColorScheme(colorScheme)
+    }
+    
+    private func setupNavBarAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        
+        appearance.backgroundColor = background
+                    
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().tintColor = tint
     }
 }
 
-#Preview {
-    CustomNavView()
+struct CustomNavView_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomNavView(tint: .white, background: .black, colorScheme: .dark) {
+            Text("Example")
+                .navigationTitle("Example")
+                .navigationBarTitleDisplayMode(.large)
+        }
+    }
 }

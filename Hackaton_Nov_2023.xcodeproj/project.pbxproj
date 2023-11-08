@@ -38,6 +38,16 @@
 		F3CF08032AFA8864006B1F9C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F3CF08022AFA8864006B1F9C /* FirebaseStorage */; };
 		F3CF08052AFA8865006B1F9C /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F3CF08042AFA8865006B1F9C /* FirebaseStorageCombine-Community */; };
 		F3CF08082AFA89BF006B1F9C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF08072AFA89BF006B1F9C /* LoginView.swift */; };
+		F3DC3C602AFB7C5700378060 /* ReconstructView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C5F2AFB7C5700378060 /* ReconstructView.swift */; };
+		F3DC3C622AFB7D9500378060 /* ReconstructProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C612AFB7D9500378060 /* ReconstructProgressView.swift */; };
+		F3DC3C642AFB7F2900378060 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C632AFB7F2900378060 /* ProgressBarView.swift */; };
+		F3DC3C662AFB863B00378060 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C652AFB863B00378060 /* ModelView.swift */; };
+		F3DC3C682AFB87FB00378060 /* UntilProcessingCompleteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C672AFB87FB00378060 /* UntilProcessingCompleteFilter.swift */; };
+		F3DC3C6A2AFB887F00378060 /* PhotogrammetrySession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C692AFB887F00378060 /* PhotogrammetrySession+Extension.swift */; };
+		F3DC3C6D2AFB956F00378060 /* LocalModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C6C2AFB956F00378060 /* LocalModelView.swift */; };
+		F3DC3C6F2AFB983600378060 /* LocalCaptureFolderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C6E2AFB983600378060 /* LocalCaptureFolderDataModel.swift */; };
+		F3DC3C732AFBAC2A00378060 /* DetailLocalModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C722AFBAC2A00378060 /* DetailLocalModelView.swift */; };
+		F3DC3C762AFBB84D00378060 /* NetworkCaptureDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC3C752AFBB84D00378060 /* NetworkCaptureDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +93,16 @@
 		F3CF07ED2AFA7AE6006B1F9C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		F3CF07F12AFA84EB006B1F9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3CF08072AFA89BF006B1F9C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F3DC3C5F2AFB7C5700378060 /* ReconstructView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructView.swift; sourceTree = "<group>"; };
+		F3DC3C612AFB7D9500378060 /* ReconstructProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructProgressView.swift; sourceTree = "<group>"; };
+		F3DC3C632AFB7F2900378060 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		F3DC3C652AFB863B00378060 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		F3DC3C672AFB87FB00378060 /* UntilProcessingCompleteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UntilProcessingCompleteFilter.swift; sourceTree = "<group>"; };
+		F3DC3C692AFB887F00378060 /* PhotogrammetrySession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotogrammetrySession+Extension.swift"; sourceTree = "<group>"; };
+		F3DC3C6C2AFB956F00378060 /* LocalModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModelView.swift; sourceTree = "<group>"; };
+		F3DC3C6E2AFB983600378060 /* LocalCaptureFolderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCaptureFolderDataModel.swift; sourceTree = "<group>"; };
+		F3DC3C722AFBAC2A00378060 /* DetailLocalModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocalModelView.swift; sourceTree = "<group>"; };
+		F3DC3C752AFBB84D00378060 /* NetworkCaptureDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCaptureDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +218,8 @@
 				F3CF07D42AFA385C006B1F9C /* CaptureDataModel.swift */,
 				F3CF07E32AFA65F7006B1F9C /* CaptureFolderManager.swift */,
 				F3CF07E52AFA74F1006B1F9C /* AuthDataModel.swift */,
+				F3DC3C6E2AFB983600378060 /* LocalCaptureFolderDataModel.swift */,
+				F3DC3C752AFBB84D00378060 /* NetworkCaptureDataModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				F3CF07E12AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift */,
+				F3DC3C632AFB7F2900378060 /* ProgressBarView.swift */,
+				F3DC3C672AFB87FB00378060 /* UntilProcessingCompleteFilter.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,6 +254,9 @@
 		F3CF07E92AFA7558006B1F9C /* ContentApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3DC3C742AFBB58400378060 /* CloudModel */,
+				F3DC3C6B2AFB955B00378060 /* LocalModel */,
+				F3DC3C5E2AFB7C3D00378060 /* Reconstruct */,
 				F3CF07EA2AFA7572006B1F9C /* Capture */,
 				F3CF07E72AFA7527006B1F9C /* ContainerCapture.swift */,
 			);
@@ -258,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				F3CF07ED2AFA7AE6006B1F9C /* View+Extension.swift */,
+				F3DC3C692AFB887F00378060 /* PhotogrammetrySession+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +296,32 @@
 				F3CF08072AFA89BF006B1F9C /* LoginView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		F3DC3C5E2AFB7C3D00378060 /* Reconstruct */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC3C5F2AFB7C5700378060 /* ReconstructView.swift */,
+				F3DC3C612AFB7D9500378060 /* ReconstructProgressView.swift */,
+				F3DC3C652AFB863B00378060 /* ModelView.swift */,
+			);
+			path = Reconstruct;
+			sourceTree = "<group>";
+		};
+		F3DC3C6B2AFB955B00378060 /* LocalModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC3C6C2AFB956F00378060 /* LocalModelView.swift */,
+				F3DC3C722AFBAC2A00378060 /* DetailLocalModelView.swift */,
+			);
+			path = LocalModel;
+			sourceTree = "<group>";
+		};
+		F3DC3C742AFBB58400378060 /* CloudModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CloudModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,22 +469,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DC3C732AFBAC2A00378060 /* DetailLocalModelView.swift in Sources */,
 				F3CF07A52AFA2EC6006B1F9C /* ContentView.swift in Sources */,
+				F3DC3C602AFB7C5700378060 /* ReconstructView.swift in Sources */,
 				F3CF07A72AFA2EC6006B1F9C /* Item.swift in Sources */,
 				F3CF07DD2AFA5500006B1F9C /* VisualEffectRoundedCorner.swift in Sources */,
 				F3CF07D82AFA3C5C006B1F9C /* CaptureView.swift in Sources */,
 				F3CF07D52AFA385C006B1F9C /* CaptureDataModel.swift in Sources */,
+				F3DC3C642AFB7F2900378060 /* ProgressBarView.swift in Sources */,
 				F3CF07DA2AFA4E11006B1F9C /* CaptureOverlayView.swift in Sources */,
 				F3CF07E42AFA65F7006B1F9C /* CaptureFolderManager.swift in Sources */,
 				F3CF07EE2AFA7AE6006B1F9C /* View+Extension.swift in Sources */,
+				F3DC3C682AFB87FB00378060 /* UntilProcessingCompleteFilter.swift in Sources */,
 				F3CF07E02AFA6058006B1F9C /* BoundingBoxGuidanceView.swift in Sources */,
+				F3DC3C6A2AFB887F00378060 /* PhotogrammetrySession+Extension.swift in Sources */,
 				F3CF07E82AFA7527006B1F9C /* ContainerCapture.swift in Sources */,
+				F3DC3C6F2AFB983600378060 /* LocalCaptureFolderDataModel.swift in Sources */,
 				F3CF07D22AFA35C0006B1F9C /* CustomNavView.swift in Sources */,
 				F3CF07D02AFA339B006B1F9C /* CustomTabView.swift in Sources */,
+				F3DC3C662AFB863B00378060 /* ModelView.swift in Sources */,
 				F3CF07E62AFA74F1006B1F9C /* AuthDataModel.swift in Sources */,
+				F3DC3C622AFB7D9500378060 /* ReconstructProgressView.swift in Sources */,
+				F3DC3C6D2AFB956F00378060 /* LocalModelView.swift in Sources */,
 				F3CF07E22AFA6363006B1F9C /* CaptureOverlayView+Buttons.swift in Sources */,
 				F3CF08082AFA89BF006B1F9C /* LoginView.swift in Sources */,
 				F3CF07A32AFA2EC6006B1F9C /* Hackaton_Nov_2023App.swift in Sources */,
+				F3DC3C762AFBB84D00378060 /* NetworkCaptureDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

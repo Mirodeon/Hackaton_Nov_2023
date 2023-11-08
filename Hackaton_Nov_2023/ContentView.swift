@@ -9,13 +9,15 @@ import SwiftUI
 import RealityKit
 
 struct ContentView: View {
-    
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var isPresented = false
+    @StateObject var authModel: AuthDataModel = AuthDataModel.instance
+    @StateObject var captureModel: CaptureDataModel = CaptureDataModel.instance
+    @StateObject var networkCaptureModel: NetworkCaptureDataModel = NetworkCaptureDataModel.instance
     
     var body: some View {
             LoginView()
+            .environmentObject(authModel)
+            .environmentObject(captureModel)
+            .environmentObject(networkCaptureModel)
     }
 }
 
